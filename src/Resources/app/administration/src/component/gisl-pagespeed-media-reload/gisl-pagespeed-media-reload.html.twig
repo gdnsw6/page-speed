@@ -1,0 +1,8 @@
+{% block sw_media_quickinfo_quickactions_delete %}
+    {% parent() %}
+    <li class="sw-media-sidebar__quickaction quickaction--webp" @click="reload">
+        <sw-icon name="regular-sync" small class="sw-media-sidebar__quickactions-icon"></sw-icon>
+        {{ $tc('gisl-pagespeed.media.reload.title') }}
+        <span class="quickaction--webp-title">{{ $tc('gisl-pagespeed.media.reload.button') }}</span>
+    </li>
+{% endblock %}

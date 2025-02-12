@@ -1,0 +1,27 @@
+{% sw_extends '@Storefront/storefront/base.html.twig' %}
+
+{% block base_body_script %}
+    {{ parent() }}
+
+    {% if config('GISLPageSpeed.config.backlink') %}
+        
+        {% set GISLPageSpeedBacklinksTitle = [
+            "GISLPageSpeed.backlink.title.1",
+            "GISLPageSpeed.backlink.title.2",
+            "GISLPageSpeed.backlink.title.3",
+            "GISLPageSpeed.backlink.title.4"
+        ] %}
+        {% set GISLPageSpeedBacklinksDescription = [
+            "GISLPageSpeed.backlink.title.1",
+            "GISLPageSpeed.backlink.title.2",
+            "GISLPageSpeed.backlink.title.3",
+            "GISLPageSpeed.backlink.title.4"
+        ] %}
+        <details class="gisl-pagespeed-plugin">
+            <summary>{{ random(GISLPageSpeedBacklinksTitle)|trans }}</summary>
+            <a href="{{ 'GISLPageSpeed.backlink.src'|trans }}">{{ random(GISLPageSpeedBacklinksDescription)|trans }}</a>
+        </details>
+
+    {% endif %}
+
+{% endblock %}

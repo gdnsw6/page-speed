@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+<services>
+
+        <service id="GISL\PageSpeed\Listener\ResponseListener">
+            <argument>%kernel.environment%</argument>
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService" />
+            <tag name="kernel.event_listener" event="kernel.response" method="onKernelResponse" />
+        </service>
+
+        <service id="GISL\PageSpeed\Service\SaveHtaccessFile">
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
+        </service>
+        
+        <service id="GISL\PageSpeed\Controller\Media\SkipController" public="true">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+            <argument type="service" id="GISL\PageSpeed\Service\GenerateMediaFiles"/>
+        </service>
+        
+        <service id="GISL\PageSpeed\Controller\Htaccess\SaveController" public="true">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService" />
+            <argument type="service" id="GISL\PageSpeed\Service\SaveHtaccessFile"/>
+        </service>
+        
+        <service id="GISL\PageSpeed\Controller\Preload\FontsController" public="true">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService" />
+        </service>
+        
+        <service id="GISL\PageSpeed\Controller\Htaccess\ResetController" public="true">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+        </service>
+
+        <service id="GISL\PageSpeed\Service\GenerateMediaFiles">
+            <argument type="service" id="request_stack"/>
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
+            <argument type="service" id="Doctrine\DBAL\Connection"/>
+            <argument>%shopware.filesystem.public.url%</argument>
+        </service>
+
+        <service id="GISL\PageSpeed\Service\DeleteMediaFiles">
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
+        </service>
+
+        <service id="GISL\PageSpeed\Storefront\Framework\Twig\Extension\UrlEncodingTwigFilter" public="false">
+            <tag name="twig.extension"/>
+            <argument type="service" id="request_stack"/>
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
+            <argument type="service" id="GISL\PageSpeed\Service\GenerateMediaFiles"/>
+        </service>
+        
+        <service id="GISL\PageSpeed\Controller\Media\DeleteController" public="true">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+            <argument type="service" id="GISL\PageSpeed\Service\DeleteMediaFiles"/>
+        </service>
+        
+        <service id="GISL\PageSpeed\Controller\Media\GenerateController" public="true">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
+            <argument type="service" id="GISL\PageSpeed\Service\GenerateMediaFiles"/>
+        </service>
+        
+        <service id="GISL\PageSpeed\Controller\Media\UpgradeController" public="true">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
+            <argument type="service" id="GISL\PageSpeed\Service\GenerateMediaFiles"/>
+            <argument type="service" id="GISL\PageSpeed\Service\DeleteMediaFiles"/>
+        </service>
+        
+        <service id="GISL\PageSpeed\Controller\Media\URLController" public="true">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
+        </service>
+        
+        <service id="GISL\PageSpeed\Controller\Media\ProgressController" public="true">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
+            <argument type="service" id="GISL\PageSpeed\Service\GenerateMediaFiles"/>
+        </service>
+
+        <service id="GISL\PageSpeed\Service\ScheduledTask\GenerateMedia">
+            <tag name="shopware.scheduled.task" />
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
+        </service>
+
+        <service id="GISL\PageSpeed\Service\ScheduledTask\GenerateMediaHandler">
+            <argument type="service" id="scheduled_task.repository" />
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
+            <argument type="service" id="GISL\PageSpeed\Service\GenerateMediaFiles"/>
+            <argument type="service" id="Doctrine\DBAL\Connection"/>
+            <tag name="messenger.message_handler" />
+        </service>
+
+    </services>
+</container>

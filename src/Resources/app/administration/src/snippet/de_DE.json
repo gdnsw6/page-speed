@@ -1,0 +1,119 @@
+{
+    "gisl-pagespeed": {
+        "htaccess": {
+            "button": {
+                "title": ".htaccess",
+                "button": ".htaccess-Datei speichern",
+                "success": "Datei erfolgreich gespeichert.",
+                "error": "Datei konnte nicht gespeichert werden."
+            },
+            "recommendation": "Diese Einstellungen werden nur beim Apache-Server übernommen."
+        },
+        "media": {
+            "reload": {
+                "button": "Die WebP-Datei nochmal neu erstellen",
+                "title": "WebP",
+                "success": "Die WebP-Datei wurde erneut erstellt",
+                "error": "Die WebP-Datei konnte nicht erstellt werden"
+            },
+            "skip": {
+                "title": "Bild überspringen",
+                "success": "Bild wurde übersprungen",
+                "error": "Bild konnte nicht übersprungen werden"
+            },
+            "url": {
+                "update": {
+                    "add": "WebP für alle Bilder erzwingen",
+                    "remove": "WebP nicht für alle Bilder erzwingen"
+                },
+                "title": "URL Decorator Service",
+                "success": "Einstellungen wurden übernommen.",
+                "error": "Einstellungen konnten nicht gespeichert werden.",
+                "warning": "Diese Option sollte nicht genutzt werden. Falls diese Option dennoch verwendet wird dann sollte diese Option dringend deaktiviert werden, während neue Medien hochgeladen werden."
+            },
+            "delete": {
+                "title": "Alle WebP-Dateien löschen",
+                "success": "[images] Bilder wurden erfolgreich gelöscht.",
+                "error": "Bilder konnten nicht gelöscht werden.",
+                "empty": "Es wurden noch keine Bilder generiert.",
+                "cache": "Bitte Shopware-Cache leeren damit alle Änderungen im Frontend übernommen werden.",
+                "cacheEmpty": "Cache wurde geleert.",
+                "cacheError": "Fehler beim Leeren des Cache."
+            },
+            "generate": {
+                "title": "Bilder generieren",
+                "all": "Alle Bilder wurden erstellt.",
+                "success": "[images] Bilder wurden erfolgreich erstellt.",
+                "memory": "Das Memory-Limit des Servers wurde erreicht während [images] Bilder erstellt wurden. Memory-Limit: [memory] Bytes",
+                "time": "Das Zeitlimit des Servers wurde erreicht während [images] Bilder erstellt wurden. Zeitlimit: [time] Sekunden",
+                "error": "Bilder konnten nicht erstellt werden.",
+                "done": "Es wurden bereits alle Bilder generiert.",
+                "empty": "Es wurden keine Bilder gefunden.",
+                "createAll": "Alle Bilder im Hintergrund erstellen",
+                "scan": {
+                    "button": "Bilder indexieren",
+                    "new": "Neue Bilder wurden gefunden",
+                    "nope": "Keine neuen Bilder wurden gefunden"
+                }
+            },
+            "settings": {
+                "more": "Weitere Optionen",
+                "info": "Wir empfehlen die folgenden Einstellungen nicht anzupassen, wenn man sich unsicher ist, wofür diese Einstellungen sind."
+            },
+            "progress": {
+                "title": "Generierte Bilder",
+                "of": "von",
+                "generated": "Bildern wurden zu WebP konvertiert.",
+                "loading": "Ladet Informationen ...",
+                "alert": "Bitte einmal den Bilder indexieren Button betätigen."
+            },
+            "upgrade": {
+                "button": "Upgrade starten",
+                "progress": "Fortschritt des Upgrades",
+                "recommendation": "Da die Generierung der WebP-Dateien optimiert wurde ist die Empfehlung alle bereits erstellten WebP-Dateien über das Plugin zu löschen. Alternativ können die bereits erstellten WebP-Dateien übernommen werden.",
+                "start": {
+                    "intro": "Upgrade wurde gestartet",
+                    "info": "Bestehende WebP-Dateien werden ermittelt."
+                },
+                "status": {
+                    "start": "von",
+                    "end": "WebP-Dateien wurden bereits übertragen."
+                },
+                "delete": {
+                    "button": "WebP-Dateien neu erstellen",
+                    "info": "Es lohnt sich die WebP-Dateien neu zu erstellen weil die Generierung der WebP-Dateien optimiert wurde und Fehler behoben wurden."
+                },
+                "keep": {
+                    "button": "Bestehende WebP-Dateien übernehmen",
+                    "info": "Alle bereits erstellten WebP-Dateien bleiben erhalten und die WebP-Dateien müssen nicht neu erstellt werden."
+                },
+                "info": {
+                    "intro": "Upgrade starten um alle neuen Funktionen freizuschalten",
+                    "text": "Um fehlenden WebP-Verknüpfungen vorzubeugen wurde bei bestehenden Installationen beim Update nicht automatisch auf die neu integrierte WebP-Lösung umgestellt."
+                },
+                "thanks": "Vielen Dank für die hilfreichen Tipps zur Verbesserung dieses Plugins. Hoffentlich erfüllt dieses Update alle Erwartungen.",
+                "success": {
+                    "title": "Upgrade erfolgreich",
+                    "info": "Bitte den Shopware-Cache leeren.",
+                    "reload": "Diese Seite wird jetzt neugeladen"
+                }
+            }
+        },
+        "activated": {
+            "title": "Backend neuladen",
+            "reload": "Diese Seite wird jetzt neugeladen damit alle Funktionen des PageSpeed-Plugins verfügbar sind."
+        },
+        "preload": {
+            "info": "Feld leer lassen, wenn keine Dateien vorgeladen werden sollen. Pro Zeile kann eine Datei definiert werden. Pfad zur Datei absolut angeben, wenn die Datei nicht in den Theme-Assets zu finden ist.",
+            "alert": "Diese Einstellung je Verkaufskanal anpassen falls sich die jeweils verwendeten Themes und Plugins unterscheiden.",
+            "fonts": {
+                "button": "CSS nach Dateien durchsuchen"
+            },
+            "scan": {
+                "title": "CSS Scan",
+                "found": "[files] Dateien wurden gefunden.",
+                "empty": "Keine Dateien gefunden"
+            }
+        }
+    }
+}

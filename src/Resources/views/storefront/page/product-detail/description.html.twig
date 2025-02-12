@@ -1,0 +1,12 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/description.html.twig' %}
+
+{% block page_product_detail_description_content_text %}
+    {% if config('GISLPageSpeed.config.webp') %}
+        <div class="product-detail-description-text"
+                itemprop="description">
+            {{ page.product.translated.description|replace({'<img src=': '<img loading="lazy" src='})|raw }}
+        </div>
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}

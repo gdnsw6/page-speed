@@ -1,0 +1,119 @@
+{
+    "gisl-pagespeed": {
+        "htaccess": {
+            "button": {
+                "title": ".htaccess",
+                "button": "Save .htaccess file",
+                "success": "File saved successfully.",
+                "error": "File could not be saved."
+            },
+            "recommendation": "These settings are only applied to the Apache server."
+        },
+        "media": {
+            "reload": {
+                "button": "Recreate the WebP file again",
+                "title": "WebP",
+                "success": "The WebP file was created again",
+                "error": "The WebP file could not be created"
+            },
+            "skip": {
+                "title": "Skip image",
+                "success": "Image was skipped",
+                "error": "Image could not be skipped"
+            },
+            "url": {
+                "update": {
+                    "add": "Force WebP for all images",
+                    "remove": "Don't force WebP for all images"
+                },
+                "title": "URL Decorator Service",
+                "success": "Settings were saved.",
+                "error": "Settings couldn't be saved.",
+                "warning": "This option should not be used. If this option is still used then it is strongly recommended that this option be disabled while new media is being uploaded."
+            },
+            "upgrade": {
+                "button": "Start upgrade",
+                "progress": "Upgrade progress",
+                "recommendation": "Since the generation of the WebP files has been optimized, the recommendation is to delete all WebP files that have already been created using the plugin. Alternatively, the WebP files that have already been created can be adopted.",
+                "start": {
+                    "intro": "Upgrade has started",
+                    "info": "Existing WebP files will be discovered."
+                },
+                "delete": {
+                    "button": "Rebuild WebP files",
+                    "info": "It is worth recreating the WebP files because the generation of the WebP files has been optimized and errors have been fixed."
+                },
+                "keep": {
+                    "button": "Apply existing WebP files",
+                    "info": "All previously created WebP files are retained and the WebP files do not need to be recreated."
+                },
+                "status": {
+                    "start": "from",
+                    "end": "WebP files have already been transferred."
+                },
+                "info": {
+                    "intro": "Start upgrade to unlock all new features",
+                    "text": "In order to prevent missing WebP links, existing installations were not automatically switched to the newly integrated WebP solution during the update."
+                },
+                "success": {
+                    "title": "Upgrade successful",
+                    "info": "Please clear the Shopware cache.",
+                    "reload": "This page will now be reloaded"
+                },
+                "thanks": "Thank you for the helpful tips on improving this plugin. Hopefully this update meets all expectations."
+            },
+            "progress": {
+                "title": "Converted Images",
+                "of": "of",
+                "generated": "Images got converted to webp.",
+                "loading": "Loading data ...",
+                "alert": "Please press the index images button once."
+            },
+            "generate": {
+                "title": "Generate images",
+                "error": "Images could not be converted.",
+                "all": "All Images were converted.",
+                "success": "[images] Images were successfully converted.",
+                "memory": "The server's memory limit was reached while creating [images] images.",
+                "time": "The server timed out while creating [images] images.",
+                "done": "All images have been generated.",
+                "empty": "No images were found.",
+                "createAll": "Create all images in the background",
+                "scan": {
+                    "button": "Index images",
+                    "new": "New images were found",
+                    "nope": "No new images were found"
+                }
+            },
+            "delete": {
+                "title": "Delete all  WebP images",
+                "success": "[images] images were successfully deleted.",
+                "error": "Images could not be deleted.",
+                "empty": "There are no images files.",
+                "cache": "Please empty Shopware-Cache so all changes are visible in the frontend.",
+                "cacheEmpty": "Cache has been cleared.",
+                "cacheError": "Failed to clear cache."
+            },
+            "settings": {
+                "more": "Other settings",
+                "info": "We recommend not changing the following settings unless you know what you are doing."
+            }
+        },
+        "activated": {
+            "title": "Reload backend",
+            "reload": "This page will now be reloaded so that all functions of the PageSpeed ​​plugin are available."
+        },
+        "preload": {
+            "info": "Leave field empty if no files are to be preloaded. One file can be defined per line. Specify the absolute path to the file if the file cannot be found in the theme assets.",
+            "alert": "Adjust this setting for each sales channel if the themes and plugins used differ.",
+            "fonts": {
+                "button": "Scan CSS for files"
+            },
+            "scan": {
+                "title": "CSS Scan",
+                "found": "[files] Files were found.",
+                "empty": "No files found"
+            }
+        }
+    }
+}

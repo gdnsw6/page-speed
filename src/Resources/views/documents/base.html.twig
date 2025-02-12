@@ -1,0 +1,14 @@
+{% sw_extends '@Framework/documents/base.html.twig' %}
+
+{% block logo %}
+{# To include a header or footer on every site, these elements have to be defined before the content #}
+{% if config.displayHeader %}
+    <header>
+        {% block document_header %}
+            {% if config.logo %}
+                <img src="{{ config.logo.url|gisl_pagespeed_webp_url_nope }}" class="logo"/>
+            {% endif %}
+        {% endblock %}
+    </header>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <card>
+        <title>Upgrade starten um alle neuen Funktion freizuschalten</title>
+        <title lang="de-DE">Upgrade starten um alle neuen Funktion freizuschalten</title>
+        <component name="gisl-pagespeed-media-upgrade">
+            <name>GISLPageSpeedUpgrade</name>
+            <label>Upgrade your version</label>
+            <label lang="de-DE">Version aktualisieren</label>
+        </component>
+        <input-field type="bool">
+            <name>upgrade</name>
+            <label>Upgrade</label>
+            <defaultValue>1</defaultValue>
+        </input-field>
+    </card>
+
+    <card>
+        <title>Images</title>
+        <title lang="de-DE">Bilder</title>
+        <input-field type="bool">
+            <name>webp</name>
+            <label>WebP</label>
+            <label lang="de-DE">WebP</label>
+            <helpText>Include images as WebP images.</helpText>
+            <helpText lang="de-DE">Zeige alle Bilder als WebP.</helpText>
+            <defaultValue>1</defaultValue>
+        </input-field>
+        <input-field type="bool">
+            <name>lazy</name>
+            <label>Lazy Load</label>
+            <label lang="de-DE">Bilder nachladen</label>
+            <helpText>Images will be loaded after the page was generated via lazy loading.</helpText>
+            <helpText lang="de-DE">Bilder werden via Lazy Load nachgeladen sobald die Seite sich aufgebaut hat und der Besucher zum Bild gescrollt hat.</helpText>
+            <defaultValue>1</defaultValue>
+        </input-field>
+        <input-field type="bool">
+            <name>ratio</name>
+            <label>Calculate image size</label>
+            <label lang="de-DE">Bildgröße berechnen</label>
+            <helpText>Calculates the best image size which is needed for the visitor viewport.</helpText>
+            <helpText lang="de-DE">Berechnet die beste Bildgröße für die Bildschirm-Auflösung des Besuchers.</helpText>
+            <defaultValue>0</defaultValue>
+        </input-field>
+    </card>
+
+    <card>
+        <title>Convert Images to WebP</title>
+        <title lang="de-DE">Bilder in WebP umwandeln</title>
+        <component name="gisl-pagespeed-media-generate">
+            <name>GISLPageSpeedMediaGenerate</name>
+            <label>Generate images</label>
+            <label lang="de-DE">Bilder generieren</label>
+        </component>
+        <component name="gisl-pagespeed-media-progress">
+            <name>GISLPageSpeedMediaProgress</name>
+            <label>Generated images</label>
+            <label lang="de-DE">Generierte Bilder</label>
+        </component>
+        <input-field type="bool">
+            <name>jpg</name>
+            <label>Convert JPG</label>
+            <label lang="de-DE">JPG umwandeln</label>
+            <defaultValue>1</defaultValue>
+        </input-field>
+        <input-field type="bool">
+            <name>png</name>
+            <label>Convert PNG</label>
+            <label lang="de-DE">PNG umwandeln</label>
+            <defaultValue>1</defaultValue>
+        </input-field>
+        <input-field type="int">
+            <name>webpQuality</name>
+            <label>Quality</label>
+            <label lang="de-DE">Qualität</label>
+            <helpText>Which quality should the converted images have? 0 is very bad and 100 is very good. The higher the value, the larger the file size.</helpText>
+            <helpText lang="de-DE">Wie soll die Qualität der generierten Bilder sein? 0 ist sehr schlecht und 100 ist sehr gut. Desto höher der Wert desto höher die Dateigröße.</helpText>
+            <defaultValue>80</defaultValue>
+        </input-field>
+        <input-field type="int">
+            <name>webpQualityThumbnails</name>
+            <label>Quality of thumbnails</label>
+            <label lang="de-DE">Qualität der Thumbnails</label>
+            <helpText>Which quality should the converted thumbnails have? 0 is very bad and 100 is very good. The higher the value, the larger the file size.</helpText>
+            <helpText lang="de-DE">Wie soll die Qualität der generierten Thumbnails sein? 0 ist sehr schlecht und 100 ist sehr gut. Desto höher der Wert desto höher die Dateigröße.</helpText>
+            <defaultValue>60</defaultValue>
+        </input-field>
+        <input-field type="bool">
+            <name>fallback</name>
+            <label>Fallback</label>
+            <helpText>Fallback for older Browsers which don't support WebP-images.</helpText>
+            <helpText lang="de-DE">Integriere ein Fallback für alte Browser die kein WebP-Format unterstützen.</helpText>
+            <defaultValue>0</defaultValue>
+        </input-field>
+        <component name="gisl-pagespeed-media-delete">
+            <name>GISLPageSpeedMediaDelete</name>
+            <label>Delete images</label>
+            <label lang="de-DE">Bilder löschen</label>
+            <helpText>Delete all images (WebP-files) which were generated by this plugin.</helpText>
+            <helpText lang="de-DE">Löscht alle Bilder (WebP-Dateien) die von diesem Plugin erstellt wurden.</helpText>
+        </component>
+        <component name="gisl-pagespeed-media-options">
+            <name>GISLPageSpeedMediaOptions</name>
+            <label>More settings</label>
+            <label lang="de-DE">Weitere Optionen</label>
+        </component>
+        <input-field type="bool">
+            <name>old</name>
+            <label>Use old converter</label>
+            <label lang="de-DE">Alte Konvertierung nutzen</label>
+            <helpText>Since version 3 of this plugin there is a new method to create the webp files. In some cases this could slow down the conversion of images. If so, you can disable this option but keep in mind that the new method fixed a lot of bugs in the old version.</helpText>
+            <helpText lang="de-DE">Seit Version 3 des Plugins wird eine neue Methode zur Konvertierung der Bilder genutzt. In manchen Fällen kann das die Konvertierung verlangsamen. Falls diese Option deaktiviert wird, verwendet das Plugin die alte Methode zur Konvertierung der Bilder.</helpText>
+            <defaultValue>0</defaultValue>
+        </input-field>
+        <input-field type="int">
+            <name>maxImageSize</name>
+            <label>Maximum Image Size</label>
+            <label lang="de-DE">Maximale Bild-Breite</label>
+            <helpText>In pixel</helpText>
+            <helpText lang="de-DE">In Pixel</helpText>
+            <defaultValue>2000</defaultValue>
+        </input-field>
+        <input-field type="int">
+            <name>webpInt</name>
+            <label>Image amount</label>
+            <label lang="de-DE">Bildanzahl</label>
+            <helpText>How many images should be processed each "Generate images"-button press?</helpText>
+            <helpText lang="de-DE">Wieviele Bilder sollen je Klick auf "Bilder generieren" erstellt werden?</helpText>
+            <defaultValue>100</defaultValue>
+        </input-field>
+        <input-field type="bool">
+            <name>exec</name>
+            <label>cwebp SSH command</label>
+            <label lang="de-DE">cwebp SSH-Befehl</label>
+            <helpText>Only activate this feature if you have cwebp installed on your server and PHP is allowed to use the exec()-function.</helpText>
+            <helpText lang="de-DE">Aktiviere diese Funktion nur, wenn cwebp auf dem Server installiert wurde und PHP Zugriff auf die exec()-Funktion hat.</helpText>
+            <defaultValue>0</defaultValue>
+        </input-field>
+        <component name="gisl-pagespeed-media-skip">
+            <name>GISLPageSpeedMediaSkip</name>
+            <label>Skip image</label>
+            <label lang="de-DE">Bild überspringen</label>
+            <helpText>Click this button if this plugin is unable to generate the next WebP file. Maybe the image in line is too big and memory limit is not enough to handle this one image.</helpText>
+            <helpText lang="de-DE">Manchmal sind auch sehr große Bilder in der Warteschlange des WebP-Konverters und diese Bilder können aufgrund mangelndem Memory Limit oder aufgrund extremer Größen (Dateigröße oder Auflösung) nicht konvertiert werden. In solchen Fällen bitte diesen Button klicken um das nächste Bild zu überspringen.</helpText>
+        </component>
+    </card>
+
+    <card>
+        <title>Scheduled Task</title>
+        <title lang="de-DE">Geplante Aufgaben</title>
+        <input-field type="bool">
+            <name>cronjob</name>
+            <label>Cronjob</label>
+            <helpText>Create webp files via scheduled tasks.</helpText>
+            <helpText lang="de-DE">Erstelle die WebP-Dateien mithilfe der geplanten Aufgaben.</helpText>
+            <defaultValue>1</defaultValue>
+        </input-field>
+        <input-field type="int">
+            <name>cronjobInt</name>
+            <label>Interval in minutes</label>
+            <label lang="de-DE">Interval in Minuten</label>
+            <helpText>In which time interval should the images be generated?</helpText>
+            <helpText lang="de-DE">In welchem Zeitabständen sollen die WebP-Dateien erstellt werden.</helpText>
+            <defaultValue>60</defaultValue>
+            <min>5</min>
+        </input-field>
+    </card>
+
+    <card>
+        <title>Compression &amp; Cache</title>
+        <title lang="de-DE">Komprimierung &amp; Cache</title>
+        <component name="gisl-pagespeed-htaccess-info">
+            <name>GISLPageSpeedHtaccessInfo</name>
+            <label>Server Info</label>
+        </component>
+        <input-field type="bool">
+            <name>gzip</name>
+            <label>Gzip compression</label>
+            <label lang="de-DE">Gzip Komprimierung</label>
+            <helpText>gzip is a file format and a software application used for file compression and decompression. The program was created by Jean-loup Gailly and Mark Adler as a free software replacement for the compress program used in early Unix systems, and intended for use by GNU</helpText>
+            <helpText lang="de-DE">gzip ist ein freies Kompressionsprogramm, das, ebenso wie das entsprechende Dateiformat gzip, praktisch für alle Computerbetriebssysteme verfügbar ist. Allgemein ist gzip die Kurzform für „GNU zip“, wobei „zip“ vom englischen Wort für den Reißverschluss entlehnt wurde.</helpText>
+            <defaultValue>1</defaultValue>
+        </input-field>
+        <input-field type="bool">
+            <name>deflate</name>
+            <label>Deflate compression</label>
+            <label lang="de-DE">Deflate Komprimierung</label>
+            <helpText>In computing, Deflate (stylized as DEFLATE) is a lossless data compression file format that uses a combination of LZ77 and Huffman coding.</helpText>
+            <helpText lang="de-DE">Deflate ist ein Algorithmus zur verlustlosen Datenkompression.</helpText>
+            <defaultValue>1</defaultValue>
+        </input-field>
+        <input-field type="bool">
+            <name>alive</name>
+            <label>Keepalive</label>
+            <helpText>A keepalive (KA) is a message sent by one device to another to check that the link between the two is operating, or to prevent the link from being broken.</helpText>
+            <helpText lang="de-DE">Keepalive ist ein Mechanismus bei der Datenübertragung mit den Zielen, eine Netzwerkverbindung aufrechtzuhalten und sich selbst von Erreichbarkeit und Funktion eines Kommunikationspartners zu überzeugen.</helpText>
+            <defaultValue>1</defaultValue>
+        </input-field>
+        <input-field type="bool">
+            <name>expires</name>
+            <label>Expires</label>
+            <label lang="de-DE">Expires</label>
+            <helpText>The Expires HTTP header contains the date/time after which the response is considered expired.</helpText>
+            <helpText lang="de-DE">Der Expires-HTTP-Header enthält das Datum/die Uhrzeit, nach der die Antwort als abgelaufen gilt.</helpText>
+            <defaultValue>1</defaultValue>
+        </input-field>
+        <input-field type="bool">
+            <name>control</name>
+            <label>Cache control</label>
+            <helpText>The Cache-Control HTTP header field holds directives (instructions) — in both requests and responses — that control caching in browsers and shared caches (e.g. Proxies, CDNs).</helpText>
+            <helpText lang="de-DE">Das HTTP-Header-Feld Cache-Control enthält Anweisungen (Anweisungen) – sowohl in Anfragen als auch in Antworten –, die das Caching in Browsern und gemeinsam genutzten Caches (z. B. Proxys, CDNs) steuern.</helpText>
+            <defaultValue>1</defaultValue>
+        </input-field>
+        <component name="gisl-pagespeed-htaccess">
+            <name>GISLPageSpeedHtaccess</name>
+            <label>save .htaccess file</label>
+            <label lang="de-DE">.htaccess-Datei speichern</label>
+            <helpText><![CDATA[Don't forget to save the plugin-configuration before pressing this button. There will be a backup of your current .htaccess-file on changes and there will be a backup of the original .htaccess-file in your /public-directory<br><br>If you don't save changes with this button the changes will be written to the .htaccess file when the frontend is loaded.]]></helpText>
+            <helpText lang="de-DE"><![CDATA[Nicht vergessen die Plugin-Konfiguration zu speichern bevor dieser Button betätigt wird. Es wird ein Backup der aktuellen .htaccess-Datei bei Änderungen gespeichert. Zusätzlich wird die originale .htaccess-Datei im /public-Verzeichnis abgelegt.<br><br>Die Änderungen werden alternativ beim ersten Laden des Frontends in die .htaccess-Datei übernommen.]]></helpText>
+        </component>
+    </card>
+    
+    <card>
+        <title>Minify Code</title>
+        <title lang="de-DE">HTML Code Minimierung</title>
+        <input-field type="bool">
+            <name>minify</name>
+            <label>HTML Minify</label>
+            <label lang="de-DE">HTML minimieren</label>
+            <defaultValue>0</defaultValue>
+        </input-field>
+    </card>
+
+    <card>
+        <title>Preload files</title>
+        <title lang="de-DE">Dateien vorladen</title>
+        <component name="gisl-pagespeed-preload-fonts">
+            <name>preload</name>
+            <label>Scan CSS for fonts</label>
+            <label lang="de-DE">CSS nach Schriften durchsuchen</label>
+        </component>
+    </card>
+
+</config>

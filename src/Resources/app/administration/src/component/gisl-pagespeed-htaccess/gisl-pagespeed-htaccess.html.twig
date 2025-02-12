@@ -1,0 +1,8 @@
+<div class="gisl-pagespeed-admin-component">
+    <sw-button-process
+        :isLoading="isLoading"
+        :processSuccess="isSaveSuccessful"
+        @process-finish="saveFinish"
+        @click="check"
+    >{{ $tc("gisl-pagespeed.htaccess.button.button") }}</sw-button-process>
+</div>

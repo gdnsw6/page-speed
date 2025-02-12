@@ -1,0 +1,29 @@
+
+{% sw_extends '@parent/storefront/layout/meta.html.twig' %}
+
+{% block layout_head_stylesheet %}
+
+    {% set GISLPageSpeedPreloadFiles = config('GISLPageSpeed.config.preload')|split("\n") %}
+    {% for GISLPageSpeedPreloadFile in GISLPageSpeedPreloadFiles %}
+        {% if GISLPageSpeedPreloadFile is not null and GISLPageSpeedPreloadFile is not empty %}
+            {% set GISLPageSpeedPreloadFont = false %}
+            {% set GISLPageSpeedPreloadFileExtension = "woff2" %}
+            {% set GISLPageSpeedPreloadFileArray = GISLPageSpeedPreloadFile|split(".") %}
+            {% for GISLPageSpeedPreloadFontCheck in GISLPageSpeedPreloadFileArray %}
+                {% if GISLPageSpeedPreloadFontCheck|lower == "woff2" || GISLPageSpeedPreloadFontCheck|lower == "woff" || GISLPageSpeedPreloadFontCheck|lower == "otf" || GISLPageSpeedPreloadFontCheck|lower == "ttf" || GISLPageSpeedPreloadFontCheck|lower == "eot" %}
+                    {% set GISLPageSpeedPreloadFont = true %}
+                    {% set GISLPageSpeedPreloadFileExtension = GISLPageSpeedPreloadFontCheck %}
+                {% endif %}
+            {% endfor %}
+            {% set GISLPageSpeedPreloadFileAssets = GISLPageSpeedPreloadFile|split("http") %}
+            {% set GISLPageSpeedPreloadFileURL = GISLPageSpeedPreloadFile %}
+            {% if GISLPageSpeedPreloadFileAssets|length < 2 %}
+                {% set GISLPageSpeedPreloadFileURL = asset(GISLPageSpeedPreloadFile, 'theme') %}
+            {% endif %}
+            <link rel="preload" href="{{ GISLPageSpeedPreloadFileURL }}" {% if GISLPageSpeedPreloadFont == true %}as="font" type="font/{{ GISLPageSpeedPreloadFileExtension }}" {% endif %} crossorigin>
+        {% endif %}
+    {% endfor %}
+    
+    {{ parent() }}
+    
+{% endblock %}

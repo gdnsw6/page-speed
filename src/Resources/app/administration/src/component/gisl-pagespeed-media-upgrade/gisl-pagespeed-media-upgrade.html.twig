@@ -1,0 +1,26 @@
+<div class="gisl-pagespeed-admin-component gisl-pagespeed-admin-component-upgrade">
+    <p v-if="start==false" class="gisl-pagespeed-admin-component-upgrade-intro">{{ $tc("gisl-pagespeed.media.upgrade.info.intro") }}</p>
+    <p v-if="start==true" class="gisl-pagespeed-admin-component-upgrade-intro">{{ $tc("gisl-pagespeed.media.upgrade.start.intro") }}</p>
+    <p class="gisl-pagespeed-admin-info" v-if="start==false">{{ $tc("gisl-pagespeed.media.upgrade.recommendation") }}</p>
+    <sw-button-process
+        v-if="start==false"
+        :isLoading="isLoading"
+        :processSuccess="isUpgradeSuccessful"
+        @process-finish="upgradeFinish"
+        @click="upgrade"
+    >{{ $tc("gisl-pagespeed.media.upgrade.keep.button") }}</sw-button-process>
+    <p v-if="start==false" class="gisl-pagespeed-admin-component-upgrade-info">{{ $tc("gisl-pagespeed.media.upgrade.keep.info") }}</p>
+    <sw-button-process
+        v-if="start==false"
+        class="sw-button--primary"
+        :isLoading="isLoading"
+        :processSuccess="isUpgradeSuccessful"
+        @process-finish="upgradeFinish"
+        @click="upgradeDelete"
+    >{{ $tc("gisl-pagespeed.media.upgrade.delete.button") }}</sw-button-process>
+    <p v-if="start==false" class="gisl-pagespeed-admin-component-upgrade-info">{{ $tc("gisl-pagespeed.media.upgrade.delete.info") }}</p>
+    <p class="gisl-pagespeed-admin-info" v-if="webp!=0">{{ $tc("gisl-pagespeed.media.upgrade.thanks") }}</p>
+    <sw-progress-bar :value="webp" :maxValue="images" v-if="webp!=0">{{ $tc("gisl-pagespeed.media.upgrade.progress") }}</sw-progress-bar>
+    <p v-if="start==true && webp==0" class="gisl-pagespeed-admin-component-upgrade-status gisl-pagespeed-admin-component-upgrade-status-info">{{ $tc("gisl-pagespeed.media.upgrade.start.info") }}</p>
+    <p v-if="start==true && webp!=0" class="gisl-pagespeed-admin-component-upgrade-status"><span v-html="webpString"></span> {{ $tc("gisl-pagespeed.media.upgrade.status.start") }} <span v-html="imagesString"></span> {{ $tc("gisl-pagespeed.media.upgrade.status.end") }}</p>
+</div>

@@ -1,0 +1,22 @@
+<div class="gisl-pagespeed-admin-component">
+    <p class="gisl-pagespeed-admin-info">{{ $tc("gisl-pagespeed.preload.alert") }}</p>
+    <sw-button-process
+        :isLoading="isLoading"
+        :processSuccess="isSaveSuccessful"
+        @process-finish="saveFinish"
+        @click="check"
+    >{{ $tc("gisl-pagespeed.preload.fonts.button") }}</sw-button-process>
+
+    <div type="textarea" class="sw-field sw-block-field sw-field--default sw-field--textarea">
+        <div class="sw-block-field__block">
+            <textarea
+                id="GISLPageSpeed.config.preload"
+                type="textarea"
+                ref="preload"
+                v-model="innerModel" 
+                v-bind="$attrs"
+                :value="value">{{ value }}</textarea>
+        </div>
+    </div>
+    <p>{{ $tc("gisl-pagespeed.preload.info") }}</p>
+</div>

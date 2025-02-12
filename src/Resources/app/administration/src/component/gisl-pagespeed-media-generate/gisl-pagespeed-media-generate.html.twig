@@ -1,0 +1,25 @@
+<div class="gisl-pagespeed-admin-component">
+    <p v-if="scan==2" class="gisl-pagespeed-admin-info">{{ $tc("gisl-pagespeed.media.generate.empty") }}</p>
+    <p v-if="scan==3||(webp>0&&images==webp)" class="gisl-pagespeed-admin-info">{{ $tc("gisl-pagespeed.media.generate.done") }}</p>
+    <sw-button-process
+        v-if="scan==true||scan==3||scan==2"
+        :isLoading="isLoading"
+        :processSuccess="isSaveSuccessful"
+        @process-finish="saveFinish"
+        @click="scanImages"
+    >{{ $tc("gisl-pagespeed.media.generate.scan.button") }}</sw-button-process>
+    <sw-button-process
+        v-if="scan==false"
+        :isLoading="isLoading"
+        :processSuccess="isSaveSuccessful"
+        @process-finish="saveFinish"
+        @click="check"
+    >{{ $tc("gisl-pagespeed.media.generate.title") }}</sw-button-process>
+    <sw-button-process
+        v-if="scan==false"
+        :isLoading="isLoading"
+        :processSuccess="isSaveSuccessful"
+        @process-finish="saveFinish"
+        @click="all"
+    >{{ $tc("gisl-pagespeed.media.generate.createAll") }}</sw-button-process>
+</div>

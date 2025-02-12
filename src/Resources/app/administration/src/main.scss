@@ -1,0 +1,242 @@
+.gisl-pagespeed-admin-component {
+    display:block;
+    margin-bottom:20px;
+    button {
+        margin-right:10px;
+    }
+}
+.gisl-pagespeed-admin-component-progress {
+    p {
+        line-height: 16px;
+        font-size: 14px;
+        margin-top:5px;
+    }
+}
+.sw-system-config--field-gisl-page-speed-config-gisl-page-speed-media-delete,
+.sw-system-config--field-gisl-page-speed-config-gisl-page-speed-media-generate,
+.sw-system-config--field-gisl-page-speed-config-gisl-page-speed-media-skip,
+.sw-system-config--field-gisl-page-speed-config-gisl-page-speed-media-progress,
+.sw-system-config--field-gisl-page-speed-config-gisl-page-speed-upgrade,
+.sw-system-config--field-gisl-page-speed-config-gisl-page-speed-htaccess,
+.sw-system-config--field-gisl-page-speed-config-gisl-page-speed-htaccess-info,
+.sw-system-config--field-gisl-page-speed-config-preload {
+    label {
+        display:none;
+    }
+}
+.sw-system-config--field-gisl-page-speed-config-gisl-page-speed-media-generate,
+.sw-system-config--field-gisl-page-speed-config-gisl-page-speed-htaccess-info {
+    .gisl-pagespeed-admin-info {
+        margin: -38px -30px 40px;
+        border-radius: 0;
+        padding: 15px 25px;
+    }
+}
+.sw-system-config--field-gisl-page-speed-config-gisl-page-speed-htaccess-info {
+    .gisl-pagespeed-admin-info {
+        margin-bottom:30px;
+    }
+}
+.sw-system-config--field-gisl-page-speed-config-preload {
+    p:last-child {
+        margin:10px 0 0;
+        font-size:14px;
+    }
+    button {
+        margin:40px 0 10px;
+    }
+    .sw-field {
+        margin-bottom:0;
+    }
+    .gisl-pagespeed-admin-info {
+        margin: -38px -30px 0;
+        border-radius: 0;
+        padding: 15px 25px;
+    }
+}
+.sales-channel-is-selected {
+    .sw-system-config--field-gisl-page-speed-config-gisl-page-speed-media-generate,
+    .sw-system-config--field-gisl-page-speed-config-gisl-page-speed-htaccess-info,
+    .sw-system-config--field-gisl-page-speed-config-preload {
+        .gisl-pagespeed-admin-info {
+            margin-top:30px;
+        }
+    }
+}
+.gisl-pagespeed-admin-component-progress-alert {
+    color:#c00;
+}
+.sw-system-config--field-gisl-page-speed-config-gisl-page-speed-media-options {
+    padding-top:25px;
+    border-top:1px solid #d1d9e0;
+    label {
+        font-weight:bold;
+    }
+}
+.gisl-pagespeed-config-hide {
+    display:none;
+}
+.gisl-pagespeed-config.sw-system-config {
+    &.gisl-pagespeed-reload {
+        display:none;
+    }
+    .sw-system-config__card--0 {
+        .sw-inherit-wrapper__toggle-wrapper {
+            display:none;
+        }
+        .sw-field--switch {
+            display:none;
+        }
+        .sw-card__header {
+            display:none;
+        }
+        .sw-card__content {
+            padding:0;
+            border-radius:8px;
+            overflow: hidden;
+        } 
+    }
+}
+.gisl-pagespeed-admin-component-delete {
+    button {
+        border:1px solid #c00;
+        background:rgba(204, 0, 0, .2);
+    }
+}
+.gisl-pagespeed-admin-info {
+    margin-top: 20px;
+    font-size: 14px;
+    border-radius:4px;
+    background:rgba(255, 236, 204, .8);
+    padding: 15px;
+}
+.gisl-pagespeed-admin-component-upgrade {
+    .gisl-pagespeed-admin-component-upgrade-intro {
+        background: #243758;
+        color:#fff;
+        padding: 20px 30px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 18px;
+    }
+    .gisl-pagespeed-admin-component-upgrade-status {
+        margin:10px 30px 30px;
+        font-size: 14px;
+        span {
+            font-weight:bold;
+        }
+        &.gisl-pagespeed-admin-component-upgrade-status-info {
+            margin:30px;
+        }
+    }
+    .sw-progress-bar {
+        padding:0 30px;
+    }
+    .gisl-pagespeed-admin-info {
+        margin:0 0 40px;
+        padding:15px 30px;
+    }
+    button {
+        margin:0 30px 5px;
+    }
+    .gisl-pagespeed-admin-component-upgrade-info {
+        margin: 0 30px 40px;
+        font-size: 12px;
+    }
+}
+.gisl-pagespeed-media-upgrade-started {
+    .sw-system-config__card--2 {
+        position:relative;
+        filter: blur(3px);
+        &:before {
+            content:"";
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            cursor:wait;
+            z-index:9;
+        }
+    }
+}
+.gisl-pagespeed-clear {
+    clear:both;
+}
+.sw-media-sidebar .sw-media-sidebar__quickaction {
+    .sw-media-sidebar__quickaction {
+        margin-bottom:0;
+    }
+}
+.quickaction--webp-title {
+    display:none;
+}
+.gisl-pagespeed-config .sw-system-config__card--0 {
+    display:none;
+    &.sw-card--visible {
+        display:block;
+    }
+}
+.sw-system-config--field-gisl-page-speed-config-gisl-page-speed-upgrade,
+.sw-system-config--field-gisl-page-speed-config-webp,
+.sw-system-config--field-gisl-page-speed-config-lazy,
+.sw-system-config--field-gisl-page-speed-config-lazyEffect,
+.sw-system-config--field-gisl-page-speed-config-ratio,
+.sw-system-config--field-gisl-page-speed-config-gisl-page-speed-media-generate,
+.sw-system-config--field-gisl-page-speed-config-gisl-page-speed-media-progress,
+.sw-system-config--field-gisl-page-speed-config-jpg,
+.sw-system-config--field-gisl-page-speed-config-png,
+.sw-system-config--field-gisl-page-speed-config-webp-quality,
+.sw-system-config--field-gisl-page-speed-config-webp-quality-thumbnails,
+.sw-system-config--field-gisl-page-speed-config-max-image-size,
+.sw-system-config--field-gisl-page-speed-config-webp-int,
+.sw-system-config--field-gisl-page-speed-config-gisl-page-speed-media-delete,
+.sw-system-config--field-gisl-page-speed-config-gisl-page-speed-media-skip,
+.sw-system-config--field-gisl-page-speed-config-gisl-page-speed-media-options,
+.sw-system-config--field-gisl-page-speed-config-fallback,
+.sw-system-config--field-gisl-page-speed-config-exec,
+.sw-system-config--field-gisl-page-speed-config-gisl-page-speed-htaccess,
+.sw-system-config--field-gisl-page-speed-config-gisl-page-speed-htaccess-info,
+.sw-system-config--field-gisl-page-speed-config-htaccess,
+.sw-system-config--field-gisl-page-speed-config-gzip,
+.sw-system-config--field-gisl-page-speed-config-deflate,
+.sw-system-config--field-gisl-page-speed-config-alive,
+.sw-system-config--field-gisl-page-speed-config-expires,
+.sw-system-config--field-gisl-page-speed-config-control,
+.sw-system-config--field-gisl-page-speed-config-minify,
+.sw-system-config--field-gisl-page-speed-config-reload {
+    opacity:0;
+    transition: width .75s;
+}
+.gisl-pagespeed-config {
+    .sw-card--visible .sw-system-config--field-gisl-page-speed-config-gisl-page-speed-upgrade,
+    .sw-system-config--field-gisl-page-speed-config-webp,
+    .sw-system-config--field-gisl-page-speed-config-lazy,
+    .sw-system-config--field-gisl-page-speed-config-lazyEffect,
+    .sw-system-config--field-gisl-page-speed-config-ratio,
+    .sw-system-config--field-gisl-page-speed-config-gisl-page-speed-media-generate,
+    .sw-system-config--field-gisl-page-speed-config-gisl-page-speed-media-progress,
+    .sw-system-config--field-gisl-page-speed-config-jpg,
+    .sw-system-config--field-gisl-page-speed-config-png,
+    .sw-system-config--field-gisl-page-speed-config-webp-quality,
+    .sw-system-config--field-gisl-page-speed-config-webp-quality-thumbnails,
+    .sw-system-config--field-gisl-page-speed-config-max-image-size,
+    .sw-system-config--field-gisl-page-speed-config-webp-int,
+    .sw-system-config--field-gisl-page-speed-config-gisl-page-speed-media-delete,
+    .sw-system-config--field-gisl-page-speed-config-gisl-page-speed-media-skip,
+    .sw-system-config--field-gisl-page-speed-config-gisl-page-speed-media-options,
+    .sw-system-config--field-gisl-page-speed-config-fallback,
+    .sw-system-config--field-gisl-page-speed-config-exec,
+    .sw-system-config--field-gisl-page-speed-config-gisl-page-speed-htaccess,
+    .sw-system-config--field-gisl-page-speed-config-gisl-page-speed-htaccess-info,
+    .sw-system-config--field-gisl-page-speed-config-htaccess,
+    .sw-system-config--field-gisl-page-speed-config-gzip,
+    .sw-system-config--field-gisl-page-speed-config-deflate,
+    .sw-system-config--field-gisl-page-speed-config-alive,
+    .sw-system-config--field-gisl-page-speed-config-expires,
+    .sw-system-config--field-gisl-page-speed-config-control,
+    .sw-system-config--field-gisl-page-speed-config-minify,
+    .sw-system-config--field-gisl-page-speed-config-reload {
+        opacity:1;
+    }
+}

@@ -1,0 +1,9 @@
+{% sw_extends '@Storefront/storefront/element/cms-element-text.html.twig' %}
+
+{% block element_text_inner %}
+    {% if config('GISLPageSpeed.config.webp') %}
+        {{ element.data.content|replace({'<img src=': '<img loading="lazy" src='})|raw }}
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,6 @@
+<div class="gisl-pagespeed-admin-component gisl-pagespeed-admin-component-progress" v-if="finish==0">
+    <sw-progress-bar :value="webp" :maxValue="images" v-if="images>0">{{ $tc("gisl-pagespeed.media.progress.title") }}</sw-progress-bar>
+    <p v-if="images>0"><span v-html="webpString"></span> {{ $tc("gisl-pagespeed.media.progress.of") }} <span v-html="imagesString"></span> {{ $tc("gisl-pagespeed.media.progress.generated") }}</p>
+    <p v-if="images<-1">{{ $tc("gisl-pagespeed.media.progress.loading") }}</p>
+    <p class="gisl-pagespeed-admin-component-progress-alert" v-if="init==true">{{ $tc("gisl-pagespeed.media.progress.alert") }}</p>
+</div>

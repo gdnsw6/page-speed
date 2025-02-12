@@ -1,0 +1,8 @@
+<div class="gisl-pagespeed-admin-component gisl-pagespeed-admin-component-delete">
+    <sw-button-process
+        :isLoading="isLoading"
+        :processSuccess="isSaveSuccessful"
+        @process-finish="saveFinish"
+        @click="check"
+    >{{ $tc("gisl-pagespeed.media.delete.title") }}</sw-button-process>
+</div>

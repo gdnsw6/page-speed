@@ -1,0 +1,34 @@
+{
+    "name": "gisl/gisl-page-speed",
+    "description": "GISL page speed",
+    "type": "shopware-platform-plugin",
+    "version": "1.0.0",
+    "license": "MIT",
+    "require": {
+        "shopware/core": "^6.5",
+        "mrclay/jsmin-php": "^2.4",
+        "rosell-dk/webp-convert": "^2.9"
+    },
+    "extra": {
+        "shopware-plugin-class": "GISL\\PageSpeed\\GISLPageSpeed",
+        "label": {
+            "de-DE": "GISL-Seitengeschwindigkeit",
+            "en-GB": "GISL page speed"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "GISL\\PageSpeed\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GISL\\PageSpeed\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/runtime": true
+        }
+    }
+}
