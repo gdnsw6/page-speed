@@ -4,11 +4,6 @@
     "type": "shopware-platform-plugin",
     "version": "1.0.0",
     "license": "MIT",
-    "require": {
-        "shopware/core": "^6.5",
-        "mrclay/jsmin-php": "^2.4",
-        "rosell-dk/webp-convert": "^2.9"
-    },
     "extra": {
         "shopware-plugin-class": "GISL\\PageSpeed\\GISLPageSpeed",
         "label": {
@@ -30,5 +25,10 @@
         "allow-plugins": {
             "symfony/runtime": true
         }
+    },
+    "require": {
+        "shopware/core": "^6.5",
+        "rosell-dk/webp-convert": "^2.9",
+        "mrclay/jsmin-php": "^2.4"
     }
 }

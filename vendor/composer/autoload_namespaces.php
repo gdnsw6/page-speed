@@ -7,5 +7,4 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'JSMin\\' => array($vendorDir . '/mrclay/jsmin-php/src'),
-    'HTMLPurifier' => array($vendorDir . '/ezyang/htmlpurifier/library'),
 );
